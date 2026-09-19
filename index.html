@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Homies+</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <div class="v-space L"></div>
+        <div class="v-space S"></div>
+        <div class="wrapper">
+            <h1>Туса&thinsp;у сАйфи</h1>
+        </div>
+
+        <div class="v-space S"></div>
+        <div class="wrapper">
+            <div class="text-width">
+                <p>Суббота 26 сентября 17:00, м. Шаболовская</p>
+            </div>
+        </div>
+
+        <div class="v-space L"></div>
+        <div class="wrapper">
+            <div class="text-width">
+                <h2>До тусы осталось</h2>
+            </div>
+        </div>
+
+            <div class="v-space S"></div>
+            <div class="wrapper">
+                
+                <div class="countdown" data-countdown>
+                <div class="countdown__item">
+                    <span class="countdown__number" data-days>00</span>
+                    <span class="countdown__label">д.</span>
+                </div>
+
+                <div class="countdown__item">
+                    <span class="countdown__number" data-hours>00</span>
+                    <span class="countdown__label">ч.</span>
+                </div>
+
+                <div class="countdown__item">
+                    <span class="countdown__number" data-minutes>00</span>
+                    <span class="countdown__label">мин.</span>
+                </div>
+
+                <div class="countdown__item">
+                    <span class="countdown__number" data-seconds>00</span>
+                    <span class="countdown__label">сек.</span>
+                </div>
+                </div>
+
+                <script>
+                const countdown = document.querySelector('[data-countdown]');
+
+                const daysElement = countdown.querySelector('[data-days]');
+                const hoursElement = countdown.querySelector('[data-hours]');
+                const minutesElement = countdown.querySelector('[data-minutes]');
+                const secondsElement = countdown.querySelector('[data-seconds]');
+
+                // 26 сентября 2026 года, 17:00 по Москве (UTC+3)
+                const targetDate = new Date('2026-09-26T17:00:00+03:00').getTime();
+
+                function updateCountdown() {
+                    const now = Date.now();
+                    const difference = targetDate - now;
+
+                    if (difference <= 0) {
+                    daysElement.textContent = '00';
+                    hoursElement.textContent = '00';
+                    minutesElement.textContent = '00';
+                    secondsElement.textContent = '00';
+                    clearInterval(timerInterval);
+                    return;
+                    }
+
+                    const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+                    const hours = Math.floor((difference / (1000 * 60 * 60)) % 24);
+                    const minutes = Math.floor((difference / (1000 * 60)) % 60);
+                    const seconds = Math.floor((difference / 1000) % 60);
+
+                    daysElement.textContent = days;
+                    hoursElement.textContent = String(hours).padStart(2, '0');
+                    minutesElement.textContent = String(minutes).padStart(2, '0');
+                    secondsElement.textContent = String(seconds).padStart(2, '0');
+                }
+
+                updateCountdown();
+
+                const timerInterval = setInterval(updateCountdown, 1000);
+                </script>
+            </div>
+
+        <div class="v-space L"></div>
+        <div class="wrapper">
+            <div class="text-width">
+                <h2>ЛегендАрный кроссовер</h2>
+                <p>Хоумис + пара дам соберутся на хате у сАйфи, чтобы отдушински расчилиться. Спокойная душевная посиделка под пиво (и не только) позволит тебе восстановиться после рабочей недели и вновь повидаться со старыми друзьями.</p>
+            </div>
+        </div>
+
+        <div class="v-space L"></div>
+        <div class="wrapper">
+            <div class="text-width">
+                <h2>НагрАды зА доход</h2>
+                <p>Каждая легенда, которая сможет преодолеть обстоятельства, отговорки и устремиться напрямик к братьям на хату у сАйфи получит доступ к охуенным лимонадам «Река²», пиву, начос с домашним гуакамоле и другим прелестям общества потребления.</p>
+            </div>
+        </div>
+
+        <div class="v-space XS"></div>
+        <div class="wrapper">
+            <figure>
+                <img src="Photos/reka.png">
+            </figure>
+        </div>
+         <div class="v-space S"></div>
+        
+        <div class="v-space L"></div>
+        <div class="wrapper">
+            <div class="text-width">
+                <h2>НаказАния за недоход</h2>
+                <p>Если ты предпочтешь без уважительной причины остаться дома и пропустить главное событие последнего тысячелетия, оставив настоящих друзей позади, ты <del>станешь петухом</del> упустишь всю благость и освежающее волшебство этого вечера, но будешь в целом понят, так как мы уже взрослые люди, и я уважаю твой выбор.</p>
+            </div>
+        </div>
+        
+        <div class="v-space XS"></div>
+        <div class="wrapper">
+            <figure>
+                <img src="Photos/sad-cock-light.png">
+            </figure>
+        </div>
+         <div class="v-space S"></div>
+
+        <div class="v-space L"></div>
+        <div class="wrapper">
+            <div class="text-width">
+                <h2>Аллея слАвы</h2>
+                <p>Каждый участник тусы у сАйфи — достойнейшая личность и заслуживает отдельного упоминания на алле славы.</p>
+                <p>Могучая кучка, блистательная плеяда, высшая лига, банда Ван дер Линде, отцы-основатели, топы рынка, рыцари круглого стола, иллюминаты, антисемиты, расисты и нигеры, гомофобы и пидоры, неудержимые, неприкасаемые, бесславные ублюдки — выдающаяся и неповторимая группа людей соберется на единственной в своем роде тусе у сАйфи. Встречайте:</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="wrapper">
+            <div class="person-gallery">
+                <figure>
+                    <img src="Photos/sayfi.png">
+
+                    <figcaption>
+                        <p class="person-name">сАйфи</p>
+                        <p class="person-description">СЕО тусы</p>
+                    </figcaption>
+                </figure>
+              
+                <figure>
+                    <img src="Photos/chatskaya.png">
+                    <figcaption>
+                        <p class="person-name">Чацкая</p>
+                        <p class="person-description">Первая леди</p>
+                    </figcaption>
+                </figure>
+
+                <figure>
+                    <img src="Photos/kaan.png">
+                    <figcaption>
+                        <p class="person-name">Каан</p>
+                        <p class="person-description">Турецкий бог</p>
+                    </figcaption>
+                </figure>
+                
+                <figure>
+                    <img src="Photos/andrey.png">
+                    
+                    <figcaption>
+                        <p class="person-name">Андрей</p>
+                        <p class="person-description">Коллекционер</p>
+                    </figcaption>
+                </figure>
+
+                <figure>
+                    <img src="Photos/timur.png">
+
+                    <figcaption>
+                        <p class="person-name">Тимур</p>
+                        <p class="person-description">Оратор</p>
+                    </figcaption>
+                </figure>
+                
+                <figure>
+                    <img src="Photos/nastya.png">
+
+                    <figcaption>
+                        <p class="person-name">Николь</p>
+                        <p class="person-description">Котомать</p>
+                    </figcaption>
+                </figure>
+                
+                <figure>
+                    <img src="Photos/ivan-t.png">
+
+                    <figcaption>
+                        <p class="person-name">Иван Т.</p>
+                        <p class="person-description">Держатель штурвала</p>
+                    </figcaption>
+                </figure>
+
+                <figure>
+                    <img src="Photos/ivan-g.png">
+
+                    <figcaption>
+                        <p class="person-name">Иван Г.</p>
+                        <p class="person-description">Патер фамилиас</p>
+                    </figcaption>
+                </figure>
+
+                <figure>
+                    <img src="Photos/anton.png">
+
+                    <figcaption>
+                        <p class="person-name">Антон</p>
+                        <p class="person-description">Богатырь</p>
+                    </figcaption>
+                </figure>
+
+                <figure>
+                    <img src="Photos/alina.png">
+
+                    <figcaption>
+                        <p class="person-name">Алина</p>
+                        <p class="person-description">Пряничное сердце</p>
+                    </figcaption>
+                </figure>
+                <figure>
+                    <img src="Photos/varya.png">
+
+                    <figcaption>
+                        <p class="person-name">Варя</p>
+                        <p class="person-description">Ювелир</p>
+                    </figcaption>
+                </figure>
+            </div>
+        </div>
+      
+            <div class="v-space M"></div>
+            <div class="v-space S"></div>
+            <div class="wrapper">
+                <div class="text-width">
+                    <h2>Освободись</h2>
+                    <p>Уникальный субботний вечер окатит тебя волной школьных воспоминаний, веселых историй и теплых разговоров. Ощути ту самую беззаботность, приятное опьянение в кругу друзей и позволь себе оставить всю тяжесть бренных будней за порогом на тусе у сАйфи. </p>
+                </div>
+            </div>
+            
+        <div class="v-space XS"></div>
+        <div class="wrapper">
+            <figure>
+                <img src="Photos/all.png">
+                <figcaption class="image-caption-class">Картинка кринж, но у меня закончились лимиты в перплексити</figcaption>
+            </figure>
+        </div>
+         <div class="v-space S"></div>
+         
+         <div class="v-space XS"></div>
+         <div class="wrapper">
+             <figure>
+                 <img src="Photos/collage.png">
+                 <figcaption class="image-caption-class">Слава богу хоумис пришли на помощь</figcaption>
+             </figure>
+         </div>
+          <div class="v-space S"></div>
+
+         <div class="v-space L"></div>
+         <div class="wrapper">
+             <div class="text-width">
+                 <h2>Приходи</h2>
+                </div>
+            </div>
+            
+            <div class="v-space S"></div>
+            <div class="wrapper">
+                <div class="text-width">
+                    <a href="https://t.me/evgenysayfi" target="_blank">Телеграм сАйфи</a>
+                </div>
+            </div>
+                
+            <div class="v-space XXL"></div>
+    </body>
+</html>

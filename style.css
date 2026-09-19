@@ -1,0 +1,204 @@
+*{
+    box-sizing: border-box;
+}
+
+:root {
+    --text-color: 32, 32, 32;
+    --caption-color: 149, 149, 149;
+}
+
+.countdown {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+/* =================== Шрифты =================== */
+
+@font-face {
+    font-family: "Paddis";
+    font-weight: 500;
+    font-style: normal;
+    src: url("Fonts/Paddis/Paddis_Handwritten.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Inter";
+    font-weight: 400;
+    font-style: normal;
+    src: url("Fonts/Inter/Inter-Regular.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "Inter";
+    font-weight: 400;
+    font-style: italic;
+    src: url("Fonts/Inter/Inter-Italic.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "Inter";
+    font-weight: 700;
+    font-style: normal;
+    src: url("Fonts/Inter/Inter-Bold.woff2") format("woff2");
+}
+
+/* =================== Стили =================== */
+
+html {
+    font-size: 16px;
+    color: rgb(var(--text-color));
+    @media (max-width: 768px) {
+        font-size: 14px;
+    }
+
+    line-height: 1.5;
+}
+
+body {
+    font-family: "Inter";
+    margin: 0;
+    background-color: #f4f4f4;
+}
+
+a {
+    color: rgba(0, 100, 255, 1);
+    text-underline-offset: 0.12em;
+    text-decoration-color: rgba(0, 100, 255, 0.3);
+}
+
+a:hover {
+    color: rgb(210, 0, 0);
+    text-decoration-color: rgba(210, 0, 0, 0.3);
+}
+
+h1 {
+    font-family: "Paddis";
+    font-weight: 500;
+    font-style: normal;
+    font-size: 8em;
+    margin: 0px;
+    line-height: 0.75;
+    letter-spacing: -0.02em;
+
+     @media (max-width: 768px) {
+         font-size: 7em;
+     }
+}
+
+h2 {
+    font-family: "Paddis";
+    font-weight: 500;
+    font-style: normal;
+    font-size: 3em;
+    margin: 0;
+    line-height: 0.7;
+
+    @media (max-width: 768px) {
+        font-size: 2.5em;
+    }
+}
+
+img {
+    display: block;
+    width: 100%;
+    border-radius: 15px;
+}
+
+.image-caption-class {
+        margin: 0.5em 0 0 0;
+        color: rgb(205, 205, 205);
+        line-height: 0.9;
+        font-size: 0.8em;
+}
+
+figure {
+    margin: 0;
+    margin-bottom: 0.5em;
+}
+
+.wrapper {
+    margin: 0 auto;
+    width: 80%;
+
+    @media (max-width: 768px) {
+        width: 100%;
+        padding: 0em 1em;
+    }
+}
+
+.text-width {
+    width: 80%;
+
+    @media (max-width: 768px) {
+        width: 100%;
+    }
+}
+
+.person-gallery {
+    display: flex;
+    flex-wrap: wrap;
+
+    & figure {
+        margin-right: 20px;
+        margin-bottom: 40px;
+    }
+
+    & img {
+        width: 200px;
+        
+        @media (max-width: 768px) {
+            width: 150px;
+        }
+    }
+
+    & .person-name {
+        margin: 0;
+        font-size: 1.3em;
+        font-weight: 700;
+        color: rgb(var(--text-color));
+    }
+    
+    & .person-description {
+        margin: 0;
+        color: rgb(var(--caption-color));
+        line-height: 0.7;
+        font-size: 0.8em;
+    }
+}
+
+/* .small-text {
+    font-size: 0.8em;
+    width: 70%;
+    color: #808080;
+
+     @media (max-width: 768px) {
+        width: 70%;
+     }
+} */
+
+/* =================== Отступы =================== */
+
+.v-space.XS {
+    height: 0.5em;
+}
+
+.v-space.S {
+    height: 1em;
+}
+
+.v-space.M {
+    height: 2em;
+}
+
+.v-space.L {
+    height: 4em;
+}
+
+.v-space.XL {
+    height: 7em;
+}
+
+.v-space.XXL {
+    height: 10em;
+}
