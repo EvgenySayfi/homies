@@ -148,7 +148,6 @@
             <div class="person-gallery">
                 <figure>
                     <img src="Photos/sayfi.png">
-
                     <figcaption>
                         <p class="person-name">сАйфи</p>
                         <p class="person-description">СЕО тусы</p>
@@ -163,17 +162,18 @@
                     </figcaption>
                 </figure>
 
-                <figure>
-                    <img src="Photos/kaan.png">
+                <figure class="swap-figure">
+                    <img class="img-base" src="Photos/kaan.png">
+                    <img class="img-alt" src="Photos/cock.png">
                     <figcaption>
                         <p class="person-name">Каан</p>
                         <p class="person-description">Турецкий бог</p>
                     </figcaption>
                 </figure>
                 
-                <figure>
-                    <img src="Photos/andrey.png">
-                    
+                <figure class="swap-figure">
+                    <img class="img-base" src="Photos/andrey.png">
+                    <img class="img-alt" src="Photos/cock.png">
                     <figcaption>
                         <p class="person-name">Андрей</p>
                         <p class="person-description">Коллекционер</p>
@@ -182,7 +182,6 @@
 
                 <figure>
                     <img src="Photos/timur.png">
-
                     <figcaption>
                         <p class="person-name">Тимур</p>
                         <p class="person-description">Оратор</p>
@@ -191,7 +190,6 @@
                 
                 <figure>
                     <img src="Photos/nastya.png">
-
                     <figcaption>
                         <p class="person-name">Николь</p>
                         <p class="person-description">Котомать</p>
@@ -200,16 +198,15 @@
                 
                 <figure>
                     <img src="Photos/ivan-t.png">
-
                     <figcaption>
                         <p class="person-name">Иван Т.</p>
                         <p class="person-description">Держатель штурвала</p>
                     </figcaption>
                 </figure>
 
-                <figure>
-                    <img src="Photos/ivan-g.png">
-
+                <figure class="swap-figure">
+                    <img class="img-base" src="Photos/ivan-g.png">
+                    <img class="img-alt" src="Photos/cock.png">
                     <figcaption>
                         <p class="person-name">Иван Г.</p>
                         <p class="person-description">Патер фамилиас</p>
@@ -218,7 +215,6 @@
 
                 <figure>
                     <img src="Photos/anton.png">
-
                     <figcaption>
                         <p class="person-name">Антон</p>
                         <p class="person-description">Богатырь</p>
@@ -227,16 +223,15 @@
 
                 <figure>
                     <img src="Photos/alina.png">
-
                     <figcaption>
                         <p class="person-name">Алина</p>
                         <p class="person-description">Пряничное сердце</p>
                     </figcaption>
                 </figure>
 
-                <figure>
-                    <img src="Photos/varya.png">
-
+                <figure class="swap-figure">
+                    <img class="img-base" src="Photos/varya.png">
+                    <img class="img-alt" src="Photos/cock.png">
                     <figcaption>
                         <p class="person-name">Варя</p>
                         <p class="person-description">Ювелир</p>
@@ -261,7 +256,8 @@
                 <figcaption class="image-caption-class">Картинка кринж, но у меня закончились лимиты в перплексити</figcaption>
             </figure>
         </div>
-         <div class="v-space S"></div>
+        
+        <div class="v-space S"></div>
          
          <div class="v-space XS"></div>
          <div class="wrapper">
@@ -285,7 +281,39 @@
                     <a href="https://t.me/evgenysayfi" target="_blank">Телеграм сАйфи</a>
                 </div>
             </div>
-                
+            
+    <script>
+        // const observer = new IntersectionObserver((entries) => {
+        //     entries.forEach((entry) => {
+        //         entry.target.classList.toggle('in-view', entry.isIntersecting);
+        //     });
+        // }, { threshold: 0.5 }); // 0.5 — картинка должна быть видна хотя бы наполовину
+        
+        // document.querySelectorAll('.swap-figure').forEach((el) => observer.observe(el));
+        // появление — срабатывает при 50% видимости
+        const showObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+            entry.target.classList.add('in-view');
+            }
+        });
+        }, { threshold: 0.8 });
+
+        // исчезновение — срабатывает только при полном уходе с экрана (0%)
+        const hideObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (!entry.isIntersecting) {
+            entry.target.classList.remove('in-view');
+            }
+        });
+        }, { threshold: 0 });
+
+        document.querySelectorAll('.swap-figure').forEach((el) => {
+        showObserver.observe(el);
+        hideObserver.observe(el);
+        });
+    </script>
+
             <div class="v-space XXL"></div>
     </body>
 </html>
