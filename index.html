@@ -164,7 +164,7 @@
 
                 <figure class="swap-figure">
                     <img class="img-base" src="Photos/kaan.png">
-                    <img class="img-alt" src="Photos/cock.png">
+                    <img class="img-alt" src="Photos/cock-kaan.png">
                     <figcaption>
                         <p class="person-name">Каан</p>
                         <p class="person-description">Турецкий бог</p>
@@ -283,14 +283,6 @@
             </div>
             
     <script>
-        // const observer = new IntersectionObserver((entries) => {
-        //     entries.forEach((entry) => {
-        //         entry.target.classList.toggle('in-view', entry.isIntersecting);
-        //     });
-        // }, { threshold: 0.5 }); // 0.5 — картинка должна быть видна хотя бы наполовину
-        
-        // document.querySelectorAll('.swap-figure').forEach((el) => observer.observe(el));
-        // появление — срабатывает при 50% видимости
         const showObserver = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
             if (entry.isIntersecting) {
@@ -314,6 +306,6 @@
         });
     </script>
 
-            <div class="v-space XXL"></div>
+    <div class="v-space XXL"></div>
     </body>
 </html>
