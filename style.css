@@ -186,7 +186,7 @@ figure {
 
 .swap-figure.in-view .img-alt {
     opacity: 1;
-    transition: opacity 1s ease;
+    transition: opacity 2.5s ease-in;
 }
 
 .swap-figure:not(in-view) .img-alt {
