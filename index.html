@@ -33,10 +33,10 @@
             <div class="wrapper">
                 
                 <div class="countdown" data-countdown>
-                <div class="countdown__item">
+                <!-- <div class="countdown__item">
                     <span class="countdown__number" data-days>00</span>
                     <span class="countdown__label">д.</span>
-                </div>
+                </div> -->
 
                 <div class="countdown__item">
                     <span class="countdown__number" data-hours>00</span>
@@ -57,7 +57,7 @@
                 <script>
                 const countdown = document.querySelector('[data-countdown]');
 
-                const daysElement = countdown.querySelector('[data-days]');
+                // const daysElement = countdown.querySelector('[data-days]');
                 const hoursElement = countdown.querySelector('[data-hours]');
                 const minutesElement = countdown.querySelector('[data-minutes]');
                 const secondsElement = countdown.querySelector('[data-seconds]');
@@ -70,7 +70,7 @@
                     const difference = targetDate - now;
 
                     if (difference <= 0) {
-                    daysElement.textContent = '00';
+                    // daysElement.textContent = '00';
                     hoursElement.textContent = '00';
                     minutesElement.textContent = '00';
                     secondsElement.textContent = '00';
@@ -78,12 +78,12 @@
                     return;
                     }
 
-                    const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+                    // const days = Math.floor(difference / (1000 * 60 * 60 * 24));
                     const hours = Math.floor((difference / (1000 * 60 * 60)) % 24);
                     const minutes = Math.floor((difference / (1000 * 60)) % 60);
                     const seconds = Math.floor((difference / 1000) % 60);
 
-                    daysElement.textContent = days;
+                    // daysElement.textContent = days;
                     hoursElement.textContent = String(hours).padStart(2, '0');
                     minutesElement.textContent = String(minutes).padStart(2, '0');
                     secondsElement.textContent = String(seconds).padStart(2, '0');
