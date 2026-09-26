@@ -136,6 +136,26 @@ figure {
     }
 }
 
+.itogi {
+    display: flex;
+    flex-wrap: nowrap; 
+    --gap: 2em;
+    gap: var(--gap);
+    width: 400px;
+    
+    @media (max-width: 768px) {
+        flex-wrap: wrap;
+        width: 100%;
+    }
+}
+
+/* .img-itogi {
+    width: 400px; 
+    clip-path: inset(20% 0 20% 0); 
+    --cut: -135px;
+    margin-top: var(--cut); 
+    margin-bottom: var(--cut);
+} */
 
 
 /* =================== Персонажи =================== */
