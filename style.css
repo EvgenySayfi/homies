@@ -136,37 +136,6 @@ figure {
     }
 }
 
-.itogi {
-    display: flex;
-    flex-wrap: nowrap; 
-    --gap: 2em;
-    gap: var(--gap);
-    box-sizing: border-box;
-
-    & img {
-    min-width: 0;      /* убирает неявный минимум по содержимому */
-    max-width: 100%;   /* жёстко ограничивает ширину контейнером */
-    flex: 1 1 0;
-    }
-    
-    @media (max-width: 768px) {
-        flex-wrap: wrap;
-        width: 100%;
-        --gap: 1em;
-    }
-}
-
-/* .img-itogi {
-    width: 400px; 
-    clip-path: inset(20% 0 20% 0); 
-    --cut: -135px;
-    margin-top: var(--cut); 
-    margin-bottom: var(--cut);
-} */
-
-
-/* =================== Персонажи =================== */
-
 .person-gallery {
     display: flex;
     flex-wrap: wrap;
@@ -186,7 +155,6 @@ figure {
             left: 0;
             opacity: 0;
         }
-
     }
 
     @media (max-width: 768px) {
@@ -221,15 +189,24 @@ figure {
     transition: none;
 }
 
-/* .small-text {
-    font-size: 0.8em;
-    width: 70%;
-    color: #808080;
+.itogi {
+    display: flex;
+    flex-wrap: wrap; 
+    --gap: 2em;
+    gap: var(--gap);
 
-     @media (max-width: 768px) {
-        width: 70%;
-     }
-} */
+    & img {
+        min-width: 0;        
+        flex: 0 0 calc((100% - var(--gap)) / 2);
+        aspect-ratio: 1 / 1;
+        height: auto;
+        object-fit: cover;
+    }
+    
+    @media (max-width: 768px) {
+        --gap: 1em;
+    }
+}
 
 /* =================== Отступы =================== */
 
