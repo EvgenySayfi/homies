@@ -100,9 +100,11 @@ h1 {
     font-weight: 500;
     font-style: normal;
     font-size: 8em;
-    margin: 0px;
     line-height: 0.75;
     letter-spacing: -0.02em;
+    margin: 0px;
+
+    scroll-margin-top: 60px;
 
      @media (max-width: 768px) {
          font-size: 6em;
