@@ -141,11 +141,18 @@ figure {
     flex-wrap: nowrap; 
     --gap: 2em;
     gap: var(--gap);
-    width: 400px;
+    box-sizing: border-box;
+
+    & img {
+    min-width: 0;      /* убирает неявный минимум по содержимому */
+    max-width: 100%;   /* жёстко ограничивает ширину контейнером */
+    flex: 1 1 0;
+    }
     
     @media (max-width: 768px) {
         flex-wrap: wrap;
         width: 100%;
+        --gap: 1em;
     }
 }
 
