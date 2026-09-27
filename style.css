@@ -183,6 +183,11 @@ figure {
             left: 0;
             opacity: 0;
         }
+
+        & .img-base,
+        & .img-alt {
+            transition: opacity 2.5s ease-in;
+        }
     }
 
     @media (max-width: 768px) {
@@ -207,15 +212,29 @@ figure {
     }
 }
 
+.swap-figure.in-view .img-base {
+    opacity: 0;
+}
+
 .swap-figure.in-view .img-alt {
+    opacity: 1;
+}
+
+/* 
+.swap-figure .img-base {
+    opacity: 1;
+} */
+
+
+/* .swap-figure.in-view .img-alt {
     opacity: 1;
     transition: opacity 2.5s ease-in;
 }
 
-.swap-figure:not(in-view) .img-alt {
+.swap-figure:not(.in-view) .img-alt {
     opacity: 0;
     transition: none;
-}
+} */
 
 .itogi {
     display: flex;
